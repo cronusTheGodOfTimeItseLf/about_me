@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>about me!</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+            .body{
+                background-color: rgba(177, 75, 75, 0);
+            }
+            
+            * {
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+
+.cursor {
+  cursor: pointer;
+}
+
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+        </style>
+    </head>
+    <body>
+        <class id="body">
+        <nav class="navbar navbar-expand-sm bg-info navbar-dark fixed-bottom">
+            <a class="navbar-brand" href="#"><h1><b>ABOUT ME!</b></h1></a>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">home</a>
+              </li>
+            </ul>
+          </nav>
+<h1>ABOUT ME!!</h1>
+      
+<div class="container">
+
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+        <img src="html.png" width="1110" height="500">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+        <img src="css.png" width="1110" height="500">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+        <img src="bootstrap.png" width="1110" height="500">
+    </div>
+  
+ 
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  
+
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="html.png" style="width:100%" onclick="currentSlide(1)" alt="html">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="css.png" style="width:100%" onclick="currentSlide(2)" alt="css">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="bootstrap.png" style="width:100%" onclick="currentSlide(3)" alt="bootstrap">
+      </div>
+    </div>
+  </div>
+
+            <div class="card-columns">
+                <div class="card bg-warning">
+                  <div class="card-body text-center">
+                    <p class="card-text"><h2>note:i wont leak alot of info,since i want to remain anonymous on the internet</h2><br/>
+                        <h1>birthdate</h1><br/>        <p>i was born on approximately 2000 jan,my father is a docter and my mum is a housewife<br/>
+                            i was born in a small village in pakistan that wasnt very well known although my parents and i moved to<br/>
+                        canada</p></p>
+                  </div>
+                </div>
+                <div class="card bg-warning">
+                  <div class="card-body text-center">
+                    <p class="card-text">  <h1>Ambitions</h1><br/>
+                        <p>my ambition is to create businesses that self substain themselfs but that i own them and they<br/>
+                            support me without me giving alot of work into them and my other ambition is to be financially free</p>
+                    </p>
+                  </div>
+                </div>
+                <div class="card bg-warning">
+                  <div class="card-body text-center">
+                    <p class="card-text"><h1>my morals</h1><br/>
+                        <p>my morals are honesty because i belive it is the best way to convay information and learn from embrace<br/>
+                            our failures and down's and improve our self to become the best person we can be,my morals might be<br/>
+                          dusted by other people but what matters truely is how i care about my self,if ive given up then and only then<br/>
+                          have i truely failed,as i then closed my mind to the possibility of winning.</p>
+                    </p>
+                  </div>
+                  </div>
+                </div>
+            </class>
+                <script>
+                    var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+                </script>
+    </body>
+</html>
